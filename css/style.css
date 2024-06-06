@@ -1,0 +1,46 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background: url('../media/BackGround.svg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.bear-image {
+    width: 500px;
+    height: 500px;
+    background: url('../media/logo.svg') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.btn-jugar {
+    margin-top: 20px;
+    background-color: #00c3ff;
+    color: white;
+    font-size: 24px;
+    width: 250px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px #0099cc;
+}
+
+.btn-jugar:hover {
+    background-color: #0099cc;
+}
+
+.btn-jugar:active {
+    box-shadow: 0 2px #0077aa;
+    transform: translateY(2px);
+}

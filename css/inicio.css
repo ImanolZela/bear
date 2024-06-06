@@ -1,0 +1,49 @@
+body {
+    background: url('../media/BackGround.svg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+}
+
+.bear-image {
+    width: 500px;
+    height: 500px;
+    background: url('../media/bear1.svg') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.input-group {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.input-group .form-control {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 60px;
+}
+
+.input-group .btn-outline-secondary {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #00c3ff;
+    color: white;
+    border: none;
+}
+
+.input-group .btn-outline-secondary:hover {
+    background-color: #0099cc;
+}
+
+.input-group .btn-outline-secondary:active {
+    background-color: #0077aa;
+    transform: translateY(2px);
+}
+
+.input-style{
+    font-size: 25px;
+    font-weight: bold;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Bear-Bot</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="../desProblemCSS/medioProblm.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="desProbl.html" class="back-button"><i class="fas fa-arrow-left"></i></a>
+        <div class="stars"></div>
+        <div class="user-icon d-flex align-items-center">
+            <i class="fas fa-user"></i>
+            <select class="ml-2 user-style" onchange="handleUserChange(this)">
+                <option id="user-name" value="" disabled selected>User</option>
+                <option value="cerrar_sesion">Cerrar sesión</option>
+            </select>
+        </div>
+    </header>
+    <div class="container-fluid d-flex flex-column min-vh-100" style="margin-top: -120px; margin-bottom: -180px; ">
+        <div class="row justify-content-center mt-4 flex-grow-1">
+            <div class="col-md-3 text-center d-flex flex-column align-items-center justify-content-center">
+                <div class="controls">
+                    <img id="dice" src="../media/dado/1.svg" alt="Dado" class="img-fluid dice">
+                    <button id="roll-button" class="btn btn-girar mt-2" onclick="rollDice()">GIRAR</button>
+                </div>
+            </div>
+            <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
+                <div id="game-board" class="game-board mx-auto"></div>
+            </div>
+        </div> 
+    </div>
+    <div class="row justify-content-center mt-4">
+        <a href="reglas.html" class="btn btn-indicaciones">INDICACIONES</a>
+    </div>
+    <div id="alert-container"></div> <!-- Contenedor para las alertas -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/deProblemJS/lvlMedio.js"></script>
+    <script src="../js/deProblemJS/dado.js"></script>
+    <script src="../js/music/audio2.js"></script>
+    <script>
+        window.onload = function() {
+            var username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('user-name').textContent = username;
+            } else {
+                alert('No se encontró el nombre de usuario, por favor regresa a la página de inicio.');
+                window.location.href = '../index.html';
+            }
+        }
+    </script>
+    <script>
+        function handleUserChange(select) {
+            var value = select.value;
+            if (value === "cerrar_sesion") {
+                window.location.href = "../index.html";
+            } else {
+                window.location.href = "#";
+            }
+        }
+    </script>
+</body>
+</html>

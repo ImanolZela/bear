@@ -1,0 +1,134 @@
+body {
+    background: url('../media/BackGround.svg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    max-width: 1500px;
+    margin-left: 150px;
+    margin-top: 60px;
+    position: relative;
+    background-color: transparent;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+    margin-bottom: 100px;
+}
+
+.user-icon {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    color: white;
+    z-index: 1001;
+}
+
+.user-icon i {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.user-icon span {
+    font-size: 16px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.header .user-icon {
+    border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    margin-left: auto;
+}
+
+.header .user-icon i {
+    margin-right: 5px;
+}
+
+.header .back-button {
+    background: white;
+    border: none;
+    color: black;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title h1 {
+    font-size: 36px;
+    color: #000080;
+    background-color: white;
+    padding: 20px;
+    border-radius: 50px;
+    text-align: center;
+    width: 550px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+.title p, h3 {
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+}
+
+.distribution {
+    margin-top: 20px;
+}
+
+.oso img {
+    max-width: 100%;
+}
+
+.reglas p {
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+}
+
+.reglas img {
+    max-width: 100%;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    width: 300px;
+    height: 300px;
+}
+
+.play-button {
+    font-size: 30px;
+    width: 250px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.user-style{
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}

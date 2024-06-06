@@ -1,0 +1,237 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background: url('../media/BackGround.svg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #000000;
+}
+
+.container-fluid {
+    height: 100%;
+    padding: 20px;
+}
+
+.header {
+    max-width: 1500px;
+    margin-left: 150px;
+    margin-top: 60px;
+    position: relative;
+    background-color: transparent;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.user-icon {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    color: white;
+    z-index: 1001;
+}
+
+.user-icon i {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.user-icon span {
+    font-size: 16px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.user-icon {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    color: white;
+    z-index: 1001;
+}
+
+.user-icon i {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.user-icon span {
+    font-size: 16px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-rows: repeat(7, 1fr); /* 7 filas */
+    grid-template-columns: repeat(8, 1fr); /* 8 columnas */
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+    border: 2px solid #00c3ff;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.board-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00c3ff;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+}
+
+.board-cell img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.board-cell p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: #00c3ff;
+    color: white;
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dice {
+    width: 200px;
+    height: 200px;
+}
+
+.btn-girar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    width: 200px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 30px;
+    box-shadow: 0 4px #218838;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-girar:hover {
+    background-color: #218838;
+}
+
+.btn-girar:active {
+    background-color: #1e7e34;
+    transform: translateY(2px);
+}
+
+.btn-indicaciones {
+    background-color: #00c3ff;
+    color: white;
+    border: none;
+    z-index: 2000;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 30px;
+    box-shadow: 0 4px #0099cc;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-indicaciones:hover {
+    background-color: #0099cc;
+}
+
+.btn-indicaciones:active {
+    background-color: #0077aa;
+    transform: translateY(2px);
+}
+
+.header .user-icon {
+    border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    margin-left: auto;
+}
+
+.header .user-icon i {
+    margin-right: 5px;
+}
+
+.header .back-button {
+    background: white;
+    border: none;
+    color: black;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-custom {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.alert-custom.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-custom.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-custom button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    color: inherit;
+    float: right;
+}
+
+.user-style{
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}

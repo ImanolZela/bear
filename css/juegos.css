@@ -1,0 +1,150 @@
+body {
+    background: url('../media/BackGround.svg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    max-width: 1500px;
+    margin-left: 150px;
+    margin-top: 60px;
+    position: relative;
+    background-color: transparent; /* Cambiado a transparente */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000; /* Asegúrate de que el header esté por encima de otros elementos */
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.user-icon {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    color: white;
+    z-index: 1001;
+}
+
+.user-icon i {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.user-icon span {
+    font-size: 16px;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.titulo {
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 4px #000000;
+    margin: 20px 0; /* Añadir margen para separarlo de los bordes */
+}
+
+.boton-juego {
+    background-color: #fdd835;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.boton-juego i {
+    color: white;
+}
+
+.game-link {
+    background-color: #00c3ff;
+    color: white;
+    border: none;
+    height: 65px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 27px;
+    font-weight: bold;
+    box-shadow: 0 4px #0099cc;
+    text-decoration: none;
+    display: inline-block;
+    flex: 1;
+    max-width: 600px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-link:hover {
+    background-color: #0099cc;
+}
+
+.game-link:active {
+    background-color: #0077aa;
+    transform: translateY(2px);
+}
+
+.game-item {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.header .back-button {
+    background: white;
+    border: none;
+    color: black;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .user-icon {
+    border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    margin-left: auto;
+}
+
+.header .user-icon i {
+    margin-right: 5px;
+}
+
+.user-style{
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}

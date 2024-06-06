@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de la Misión</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="../desProblemCSS/reglas.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../pages/juegos.html" class="back-button"><i class="fas fa-arrow-left"></i></a>
+        <div class="stars"></div>
+        <div class="user-icon d-flex align-items-center">
+            <i class="fas fa-user"></i>
+            <select class="ml-2 user-style" onchange="handleUserChange(this)">
+                <option id="user-name" value="" disabled selected>User</option>
+                <option value="cerrar_sesion">Cerrar sesión</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="title text-center ">
+            <h1>DETALLES DE LA MISIÓN</h1>
+            <p>Bear-Bot quiere llegar a su nave espacial, ¡ayúdalo a lograr su objetivo!</p>
+        </div>
+        <div class="distribution row">
+            <div class="oso col-md-6 text-center">
+                <img src="../media/bear1.svg" alt="oso" class="bear-image">
+            </div>
+            <div class="reglas col-md-6 text-center">
+                <p>Gira el dado <i class="fas fa-dice"></i> y, con ayuda de las flechas del teclado 
+                <i class="fas fa-arrow-up"></i> <i class="fas fa-arrow-down"></i> <i class="fas fa-arrow-left"></i> 
+                <i class="fas fa-arrow-right"></i>, desplaza a Bear-Bot por el tablero evitando los obstáculos:</p>
+                <h3>OBSTÁCULOS</h3>
+                <img src="../media/obstaculoRegla.svg" alt="Obstáculos" class="obstacle-image">
+                
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="desProbl.html" class="btn btn-success play-button">JUGAR</a>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        window.onload = function() {
+            var username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('user-name').textContent = username;
+            } else {
+                alert('No se encontró el nombre de usuario, por favor regresa a la página de inicio.');
+                window.location.href = '../index.html';
+            }
+        }
+    </script>
+    <script>
+        function handleUserChange(select) {
+            var value = select.value;
+            if (value === "cerrar_sesion") {
+                window.location.href = "../index.html";
+            } else {
+                window.location.href = "#";
+            }
+        }
+    </script>
+</body>
+</html>

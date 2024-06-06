@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descomponiendo Problemas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../desProblemCSS/desProbl.css" rel="stylesheet">
+</head>
+<body>
+        <header class="header">
+            <a href="../pages/juegos.html" class="back-button"><i class="fas fa-arrow-left"></i></a>
+            <div class="user-icon d-flex align-items-center">
+                <i class="fas fa-user"></i>
+                <select class="ml-2 user-style" onchange="handleUserChange(this)">
+                    <option id="user-name" value="" disabled selected>User</option>
+                    <option value="cerrar_sesion">Cerrar sesión</option>
+                </select>
+            </div>
+        </header>
+    <div class="container-fluid">
+        <div class="row align-items-center mt-5">
+            <div class="col-12 text-center">
+                <h1 class="titulo">DESCOMPONIENDO PROBLEMAS</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 text-center">
+                <div class="boton-juego mb-3">
+                    <i class="fas fa-puzzle-piece fa-3x"></i>
+                </div>
+                <h2>Elige el nivel de dificultad del juego</h2>
+            </div>
+            <div class="col-12 text-center mt-5">
+                <a href="facilProblm.html" class="btn btn-color btn-facil">FÁCIL</a>
+                <a href="medioProblm.html" class="btn btn-color btn-intermedio">INTERMEDIO</a>
+                <a href="dificilProblm.html" class="btn btn-color btn-dificil">DIFÍCIL</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        window.onload = function() {
+            var username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('user-name').textContent = username;
+            } else {
+                alert('No se encontró el nombre de usuario, por favor regresa a la página de inicio.');
+                window.location.href = '../index.html';
+            }
+        }
+    </script>
+    <script>
+        function handleUserChange(select) {
+            var value = select.value;
+            if (value === "cerrar_sesion") {
+                window.location.href = "../index.html";
+            } else {
+                window.location.href = "#";
+            }
+        }
+    </script>
+</body>
+</html>
